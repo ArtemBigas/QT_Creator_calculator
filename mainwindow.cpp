@@ -165,6 +165,8 @@ void MainWindow::on_button1_Equals_clicked()
     case 4:result=result-operand;break;};
     std::string s= std::to_string((int)result);
     ui->lineResult->setText(QString::fromStdString(s));
+    operand=0;
+    updateLcdOperand();
 }
 
 
