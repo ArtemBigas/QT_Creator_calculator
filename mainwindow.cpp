@@ -94,7 +94,9 @@ void MainWindow::on_button1_sign_clicked()
 
 void MainWindow::on_button1_Plus_clicked()
 
-{   switch(i){case 1:result=result+operand;break;
+{
+    switch(i){case 0:result=operand;break;
+    case 1:result=result+operand;break;
     case 2:result=result-operand;break;
     case 3:result=result*operand;break;
     case 4:result=result/operand;break;};
@@ -108,7 +110,9 @@ void MainWindow::on_button1_Plus_clicked()
 
 void MainWindow::on_button1_Minus_clicked()
 {
-    switch(i){case 1:result=result+operand;break;
+
+    switch(i){case 0:result=operand;break;
+    case 1:result=result+operand;break;
     case 2:result=result-operand;break;
     case 3:result=result*operand;break;
     case 4:result=result/operand;break;};
@@ -122,7 +126,9 @@ void MainWindow::on_button1_Minus_clicked()
 
 void MainWindow::on_button1_Multiply_clicked()
 {
-    switch(i){case 1:result=result+operand;break;
+
+    switch(i){case 0:result=operand;break;
+    case 1:result=result+operand;break;
     case 2:result=result-operand;break;
     case 3:result=result*operand;break;
     case 4:result=result/operand;break;};
@@ -136,7 +142,9 @@ void MainWindow::on_button1_Multiply_clicked()
 
 void MainWindow::on_button1_Divide_clicked()
 {
-    switch(i){case 1:result=result+operand;break;
+
+    switch(i){case 0:result=operand;break;
+    case 1:result=result+operand;break;
     case 2:result=result-operand;break;
     case 3:result=result*operand;break;
     case 4:result=result/operand;break;};
@@ -150,7 +158,8 @@ void MainWindow::on_button1_Divide_clicked()
 
 void MainWindow::on_button1_Equals_clicked()
 {
-    switch(i){case 1:result=result+operand;break;
+    switch(i){case 0:result=operand;break;
+    case 1:result=result+operand;break;
     case 2:result=result-operand;break;
     case 3:result=result-operand;break;
     case 4:result=result-operand;break;};
@@ -163,6 +172,7 @@ void MainWindow::on_button1_Backspace_clicked()
 {
   operand=(int) operand/10;
     updateLcdOperand();
+
 }
 
 
@@ -171,6 +181,7 @@ void MainWindow::on_button1_clear_clicked()
     result=0;
   operand=0;
     updateLcdOperand();
+  updatelineResult();
 }
 
 void MainWindow::updateLcdOperand()
