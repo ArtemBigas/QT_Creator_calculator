@@ -161,8 +161,8 @@ void MainWindow::on_button1_Equals_clicked()
     switch(i){case 0:result=operand;break;
     case 1:result=result+operand;break;
     case 2:result=result-operand;break;
-    case 3:result=result-operand;break;
-    case 4:result=result-operand;break;};
+    case 3: result = result * operand; break;
+    case 4: result = result / operand; break;};
     std::string s= std::to_string((int)result);
     ui->lineResult->setText(QString::fromStdString(s));
     operand=0;
